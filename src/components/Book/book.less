@@ -1,0 +1,111 @@
+@import "src/styles/colors.less";
+
+.book-component {
+
+    /* BACK ARROW */
+    #back svg {
+        position: absolute;
+        border: none;
+        width: 2rem;
+        right: 1rem;
+        top: 0.5rem;
+        z-index: 10;
+    }
+
+
+    /* BACK ARROW */
+
+    .pages {
+        cursor: default;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        background: linear-gradient(to right, rgba(30, 30, 30, 0.1), transparent 25%, transparent 30%, rgba(30, 30, 30, 0.3) 48%, rgba(30, 30, 30, 0.4) 50%, transparent 50%, rgba(30, 30, 30, 0.3) 70%, transparent);
+
+        .page {
+            display: flex;
+            flex-direction: column;
+            width: calc(50% - 4rem);
+            height: calc(100% - 4em);
+            margin: 2rem;
+
+            h1,
+            h3 {
+                text-shadow: none;
+            }
+
+            .card {
+                height: 100%;
+                width: 100%;
+                justify-content: space-evenly;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                &.disabled {
+                    img {
+                        -webkit-filter: grayscale(100%);
+                        filter: grayscale(100%);
+                    }
+
+                    span,
+                    p {
+                        color: rgba(128, 128, 128, 0.501);
+                    }
+
+                    .info {
+                        color: black;
+                        font-weight: bold;
+                    }
+
+                }
+
+                .name {
+                    font-weight: bold;
+                    font-size: 18px;
+                }
+
+                img {
+                    height: 120px;
+                }
+
+                .buy {
+                    padding: 4px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 150px;
+                    font-size: 16px;
+                    cursor: pointer;
+                    background-color: @brown-bg;
+                    color: @gold-txt;
+                    border-radius: 15px;
+                    font-weight: bold;
+                    text-shadow: 0 6px 6px black;
+                    border: 1px solid rgba(142, 121, 26, 0.079);
+                }
+            }
+
+            &.second-page {
+                align-items: flex-end;
+            }
+
+            &.first-page {
+                align-items: flex-start;
+            }
+
+            .page-number {
+
+                &.next {
+                    text-align: end;
+                }
+
+                &.enable:hover {
+                    font-weight: bold;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

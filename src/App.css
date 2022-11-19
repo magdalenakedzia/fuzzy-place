@@ -1,4 +1,17 @@
 body {
 
     background-color: #d2b593;
+    display: flex;
+    justify-content: center;
+}
+
+.sidebar-width {
+    width: 15em;
+}
+
+@media (min-width: 42em) {
+
+    .sidebar-width {
+        width: 4em;
+    }
 }
