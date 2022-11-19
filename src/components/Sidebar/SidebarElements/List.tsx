@@ -9,9 +9,9 @@ function List() {
     ]
     return (
         <ul>
-            {menu.map(element => (
-                <li>
-                    <a className="sidebar-nav-link" href="#0">
+            {menu.map((element, i) => (
+                <li key={`menu-element-${i}`}>
+                    <a className="sidebar-nav-link" href={element.link}>
                         <span>{element.field}</span>
                     </a>
                 </li>
