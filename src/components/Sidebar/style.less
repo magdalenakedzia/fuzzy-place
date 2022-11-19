@@ -1,0 +1,141 @@
+@import "src/styles/colors.less";
+@import url("https://use.typekit.net/fcj5bhk.css");
+
+.sidebar {
+
+    .sidebar-trigger {
+        z-index: 2;
+        position: fixed;
+        top: 10px;
+        left: 0px;
+        width: 100%;
+        height: 4em;
+        background: @brown-bg;
+
+        span {
+            padding: 5px 15px;
+        }
+    }
+
+
+    .sidebar-nav {
+        position: fixed;
+        top: 0;
+        left: -15em;
+        overflow: hidden;
+        transition: all .3s ease-in;
+        width: 15em;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        background: @brown-bg;
+        -moz-box-shadow: 3px 0 5px 0 #555;
+        -webkit-box-shadow: 3px 0 5px 0 #555;
+        box-shadow: 3px 0 5px 0 #555;
+    }
+
+    .sidebar-nav ul {
+        list-style-type: none;
+        display: block;
+        padding: 0;
+    }
+
+    .sidebar-nav ul li {
+        width: 100%;
+    }
+
+    .sidebar-nav-link {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        height: 3em;
+    }
+
+    a {
+        position: absolute;
+        top: 50%;
+        text-decoration: none;
+        text-align: center;
+        transform: translateY(-50%);
+        color: @gold-txt;
+        font-family: trajan-color, serif;
+        font-size: 18px;
+        font-weight: bold;
+        transform: translate(0px, -2px);
+        text-shadow: 0 6px 6px black;
+    }
+
+    .sidebar-nav-link:hover {
+        color: @glow;
+        transform: translate(0px, -6px);
+        text-shadow: 0 6px 6px rgb(51, 50, 26);
+    }
+
+    @media (min-width: 42em) {
+        .layout-content {
+            margin-left: 4em;
+        }
+
+        .sidebar-trigger {
+            width: 3em;
+        }
+
+        .sidebar-nav {
+            width: 4em;
+            left: 0;
+
+            ul {
+                display: none;
+            }
+
+        }
+
+        .center-box {
+            display: none;
+        }
+
+        .sidebar-nav:hover,
+        .sidebar-nav:focus,
+        .sidebar-trigger:hover+.sidebar-nav,
+        .sidebar-trigger:focus+.sidebar-nav {
+
+            .center-box,
+            ul {
+                display: block;
+            }
+
+            width: 15em;
+        }
+    }
+
+    @media (min-width: 68em) {
+        .layout-content {
+            margin-left: 15em;
+        }
+
+        .sidebar-trigger {
+            display: none
+        }
+
+        .center-box {
+            display: block;
+
+        }
+
+        .sidebar-nav {
+            width: 15em;
+
+            ul {
+                display: block;
+            }
+        }
+
+        .sidebar-nav ul {
+            top: 1.3em;
+
+        }
+    }
+
+
+
+}
