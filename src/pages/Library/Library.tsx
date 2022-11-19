@@ -7,7 +7,6 @@ import "./styles.less";
 
 function Library() {
     const [activeClass, setActiveClass] = useState("");
-    console.log("aa", activeClass)
     return (
         <div className="library-page bg-dark">
             <div id='shelf'>
