@@ -1,5 +1,7 @@
-.sidebar {
+@import "src/styles/colors.less";
+@import url("https://use.typekit.net/fcj5bhk.css");
 
+.sidebar {
 
     .sidebar-trigger {
         z-index: 2;
@@ -8,18 +10,13 @@
         left: 0px;
         width: 100%;
         height: 4em;
-        background: rgb(128, 0, 49);
+        background: @brown-bg;
 
         span {
             padding: 5px 15px;
         }
     }
 
-    .sidebar-trigger>i {
-        display: inline-block;
-        margin: 1.5em 0 0 1.5em;
-        color: #f07ab0;
-    }
 
     .sidebar-nav {
         position: fixed;
@@ -31,8 +28,7 @@
         height: 100%;
         display: flex;
         flex-direction: column;
-        background: rgb(128, 0, 49);
-        color: rgba(255, 255, 255, 0.7);
+        background: @brown-bg;
         -moz-box-shadow: 3px 0 5px 0 #555;
         -webkit-box-shadow: 3px 0 5px 0 #555;
         box-shadow: 3px 0 5px 0 #555;
@@ -41,6 +37,7 @@
     .sidebar-nav ul {
         list-style-type: none;
         display: block;
+        padding: 0;
     }
 
     .sidebar-nav ul li {
@@ -51,24 +48,27 @@
         position: relative;
         display: inline-block;
         width: 100%;
-        height: 4em;
+        height: 3em;
     }
 
     a {
         position: absolute;
         top: 50%;
         text-decoration: none;
-        left: 3em;
+        text-align: center;
         transform: translateY(-50%);
-        color: rgb(230, 148, 182);
+        color: @gold-txt;
+        font-family: trajan-color, serif;
+        font-size: 18px;
+        font-weight: bold;
         transform: translate(0px, -2px);
-        text-shadow: 0 6px 6px rgba(0, 0, 0, 1);
+        text-shadow: 0 6px 6px black;
     }
 
     .sidebar-nav-link:hover {
-        color: rgb(251, 116, 172);
+        color: @glow;
         transform: translate(0px, -6px);
-        text-shadow: 0 6px 6px rgb(20, 16, 16);
+        text-shadow: 0 6px 6px rgb(51, 50, 26);
     }
 
     @media (min-width: 42em) {
@@ -77,12 +77,17 @@
         }
 
         .sidebar-trigger {
-            width: 4em;
+            width: 3em;
         }
 
         .sidebar-nav {
             width: 4em;
             left: 0;
+
+            ul {
+                display: none;
+            }
+
         }
 
         .center-box {
@@ -93,7 +98,9 @@
         .sidebar-nav:focus,
         .sidebar-trigger:hover+.sidebar-nav,
         .sidebar-trigger:focus+.sidebar-nav {
-            .center-box {
+
+            .center-box,
+            ul {
                 display: block;
             }
 
@@ -117,6 +124,10 @@
 
         .sidebar-nav {
             width: 15em;
+
+            ul {
+                display: block;
+            }
         }
 
         .sidebar-nav ul {

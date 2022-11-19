@@ -1,21 +1,22 @@
 function List() {
+    const menu = [
+        { field: "Home", link: "/" },
+        { field: "Library", link: "/library" },
+        { field: "Potions", link: "/potions" },
+        { field: "Battlefield", link: "/battlefield" },
+        { field: "Adventures", link: "/adventures" },
+        { field: "Shop", link: "/shop" },
+    ]
     return (
         <ul>
-            <li>
-                <a className="sidebar-nav-link" href="#0">
-                    <span>Home</span>
-                </a>
-            </li>
-            <li>
-                <a className="sidebar-nav-link" href="#0">
-                    <span>My Profile</span>
-                </a>
-            </li>
-            <li>
-                <a className="sidebar-nav-link" href="#0">
-                    <span>Camera</span>
-                </a>
-            </li>
+            {menu.map(element => (
+                <li>
+                    <a className="sidebar-nav-link" href="#0">
+                        <span>{element.field}</span>
+                    </a>
+                </li>
+            ))}
+
         </ul>
 
     );

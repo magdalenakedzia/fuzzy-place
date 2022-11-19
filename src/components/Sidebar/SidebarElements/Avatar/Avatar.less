@@ -1,3 +1,5 @@
+@import "src/styles/colors.less";
+
 .avatar {
     padding: 100px 0 50px;
     height: 170px;
@@ -24,10 +26,10 @@
     }
 
     img {
-        width: 184px;
-        height: 183px;
-        padding: 8px;
-        border-radius: 13px;
+        width: 190px;
+        height: 189px;
+        padding: 5px;
+        border-radius: 10px;
     }
 
     .animated-border-box:before,
@@ -43,8 +45,8 @@
         height: 99999px;
         background-repeat: no-repeat;
         background-position: 0 0;
-        background-image: conic-gradient(rgba(0, 0, 0, 0), rgb(199, 26, 98), rgba(70, 62, 62, 0) 25%);
-        animation: rotate 4s linear infinite;
+        background-image: conic-gradient(rgba(0, 0, 0, 0), rgba(225, 214, 144, 0.566), rgba(70, 62, 62, 0) 25%);
+        animation: rotate 8s linear infinite;
     }
 
     .animated-border-box:after {
@@ -55,7 +57,7 @@
         top: 5px;
         width: calc(100% - 10px);
         height: calc(100% - 10px);
-        background: rgb(199, 26, 98);
+        background: @gold-txt;
         border-radius: 7px;
     }
 
