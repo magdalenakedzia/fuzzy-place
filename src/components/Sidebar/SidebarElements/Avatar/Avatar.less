@@ -1,0 +1,68 @@
+.avatar {
+    padding: 100px 0 50px;
+    height: 170px;
+    display: block;
+
+    .animated-border-box,
+    .animated-border-box-glow {
+        max-height: 200px;
+        max-width: 200px;
+        height: 100%;
+        width: 100%;
+        margin-left: 15px;
+        position: absolute;
+        overflow: hidden;
+        z-index: 0;
+        border-radius: 10px;
+    }
+
+    .animated-border-box-glow {
+        overflow: hidden;
+        filter: blur(20px);
+
+
+    }
+
+    img {
+        width: 184px;
+        height: 183px;
+        padding: 8px;
+        border-radius: 13px;
+    }
+
+    .animated-border-box:before,
+    .animated-border-box-glow:before {
+        content: '';
+        z-index: -2;
+        text-align: center;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(0deg);
+        position: absolute;
+        width: 99999px;
+        height: 99999px;
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        background-image: conic-gradient(rgba(0, 0, 0, 0), rgb(199, 26, 98), rgba(70, 62, 62, 0) 25%);
+        animation: rotate 4s linear infinite;
+    }
+
+    .animated-border-box:after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        left: 5px;
+        top: 5px;
+        width: calc(100% - 10px);
+        height: calc(100% - 10px);
+        background: rgb(199, 26, 98);
+        border-radius: 7px;
+    }
+
+    @keyframes rotate {
+        100% {
+            transform: translate(-50%, -50%) rotate(1turn);
+        }
+    }
+
+}
