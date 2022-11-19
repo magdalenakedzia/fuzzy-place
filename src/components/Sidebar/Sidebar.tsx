@@ -14,10 +14,8 @@ function Sidebar() {
                 </a>
 
                 <nav className="sidebar-nav">
-                    {/* <div className=> */}
                     <Avatar />
                     <List />
-                    {/* </div> */}
                 </nav>
             </div>
         </div>
