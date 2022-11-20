@@ -2,7 +2,6 @@ function List() {
     const menu = [
         { field: "Home", link: "/" },
         { field: "Library", link: "/library" },
-        { field: "Potions", link: "/potions" },
         { field: "Battlefield", link: "/battlefield" },
         { field: "Adventures", link: "/adventures" },
         { field: "Shop", link: "/shop" },
