@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { SpellBook } from "./SpellBook";
 import { PotionsBook } from "./PotionsBook";
 import { SpellAdvanced } from "./SpellAdvanced";
@@ -7,6 +7,14 @@ import "./styles.less";
 
 function Library() {
     const [activeClass, setActiveClass] = useState("");
+
+    useEffect(() => {
+        document.body.classList.add('library')
+        return () => {
+            document.body.classList.remove('library')
+        }
+    }, [])
+
     return (
         <div className="library-page bg-dark">
             <div id='shelf'>
