@@ -17,7 +17,7 @@ function Book({ setActiveClass, type, list }: TBook) {
                 <p>{card.decription}</p>
                 {card.avaible ? (<button className="buy">BUY {card.price} <Coin /> </button>
                 ) : (
-                    <span className="info"> NOT AVAIBLE</span>
+                    <span className="info"> NOT AVAILABLE</span>
                 )}
             </div>
         )

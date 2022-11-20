@@ -1,3 +1,5 @@
+@import "src/styles/colors.less";
+
 body.adventures {
     background: url("https://media.cntraveler.com/photos/5eb18e42fc043ed5d9779733/master/pass/BlackForest-Germany-GettyImages-147180370.jpg") no-repeat;
     background-size: cover;
@@ -6,11 +8,20 @@ body.adventures {
 
 .adventures-page {
 
-    .container {
-        margin-left: 6rem;
-        display: flex;
+    .title {
+        text-align: center;
+        color: #191616;
+        font-family: trajan-color, serif;
+        text-shadow: 0 6px 6px rgb(103, 103, 103);
+    }
 
-        padding: 50px 25px;
+    span {
+        font-weight: bold;
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-around;
     }
 
     .drop {
@@ -28,15 +39,11 @@ body.adventures {
     }
 
     .drop:nth-child(1) {
-        border-radius: 49% 51% 70% 30% / 30% 30% 70% 70%;
+        border-radius: 49% 90% 70% 30% / 30% 30% 70% 70%;
     }
 
     .drop:nth-child(2) {
         border-radius: 49% 51% 41% 59% / 52% 30% 70% 48%;
-    }
-
-    .drop:nth-child(3) {
-        border-radius: 76% 24% 40% 60% / 40% 69% 31% 60%;
     }
 
     .drop:hover {
@@ -97,8 +104,8 @@ body.adventures {
     .drop .content a {
         position: relative;
         padding: 10px 25px;
-        background: var(--color);
-        color: #fff;
+        background: @brown-bg;
+        color: @gold-txt;
         border-radius: 25px;
         font-weight: 500;
         text-decoration: none;
@@ -112,21 +119,4 @@ body.adventures {
         opacity: 1;
     }
 
-    .drop .content a::before {
-        content: '';
-        position: absolute;
-        top: 5px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 25%;
-        height: 5px;
-        background: rgba(255, 255, 255, 0.5);
-        border-radius: 5px;
-        transition: 0.5s;
-    }
-
-    .drop .content a:hover::before {
-        transform: translateX(-50%) translateY(28px);
-        width: 65%;
-    }
 }
