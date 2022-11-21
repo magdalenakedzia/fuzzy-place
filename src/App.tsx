@@ -4,6 +4,7 @@ import { Sidebar } from './components/Sidebar';
 import { Home } from './pages/Home';
 import { Library } from './pages/Library';
 import { Adventures } from './pages/Adventures';
+import { Battlefield } from './pages/Battlefield';
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
           <Route path="/" element={<Home />}> </Route>
           <Route path="/library" element={<Library />}></Route>
           <Route path="/adventures" element={<Adventures />}></Route>
+          <Route path="/battlefield" element={<Battlefield />}></Route>
 
         </Routes>
       </BrowserRouter>
