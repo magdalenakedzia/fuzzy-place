@@ -2,26 +2,6 @@
     .egg {
       width: 10em;
       height: 14em;
-      
-        &:before {
-          content:"";
-          position:absolute;
-          top:100%;
-          left:50%;
-          width:8em;
-          height:2.5em;
-          margin-left:-4em;
-          margin-top:-1.2em;
-          background-color:rgba(0, 0, 0, 0.1);
-          border-radius:50%;
-          animation:shadow-wobble 2.2s ease-in-out infinite;
-        }
-        
-        &:hover {
-          &:before {
-            animation:none;
-          }
-        }
 
         @keyframes shadow-wobble {
             0% {
