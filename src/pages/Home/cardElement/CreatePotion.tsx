@@ -1,18 +1,9 @@
-import "./styles.less";
+import "./potion.less";
 
 const CreatePotion = () => {
     return (
         <div className="create-potion">
-            <div className="group">
-                <div className="main">
-                    <div className="shade"></div>
-                </div>
-                <div className="legs"></div>
-                <div className="rim"></div>
-                <div className="bubbles"></div>
-                <div className="broom"></div>
-                <div className="shadow"></div>
-            </div>
+            <img src="https://media2.giphy.com/media/etKVjk3oHPEb3Z2207/giphy.gif?cid=ecf05e47k9gpmpzu2ek6msr6k93louurxj5q5mkhm7nypx5w&rid=giphy.gif&ct=s" />
         </div>
     )
 }
